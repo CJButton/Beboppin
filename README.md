@@ -33,7 +33,7 @@ one of the objects hits the player's ship, the game is over.
 
 This project will utilize the following:
 - Vanilla JavaScript
-- EaselJS to render graphics
+- canvas to render graphics
 - Webpack
 
 We will also need the following scripts:
