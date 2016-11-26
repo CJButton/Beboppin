@@ -3,21 +3,43 @@
 
 html {
   background-color: purple;
+  font-family: 'Domine', serif;
 }
 
 .muteButton {
+  margin-top: 25px;
   height: 25px;
-  margin-left: 915px;
+  margin-left: 360px;
+}
+
+.titleCard {
+  width: 500px;
+}
+
+.startButton {
+  margin-left: 200px;
+  border: 0;
+}
+
+.introPara {
+  margin-left: 25px;
+  margin-right: 25px;
 }
 
 .splashScreen {
-  height: 100px;
-  width: 100px;
-  background-color: blue;
+  margin-top: 25px;
+  height: 600px;
+  width: 500px;
+  background-color: black;
+  color: white;
+  margin-left: 400px;
+  position: absolute;
+  z-index: 1;
+
 }
 
 #canvas {
-  /*background-color: black;*/
+  margin-top: 25px;
   background-image: url(http://res.cloudinary.com/ddbfkqb9m/image/upload/v1480108632/starbg2_i9ud8h.jpg);
   margin-left: 400px;
   background-attachment: scroll;
@@ -25,4 +47,5 @@ html {
   background-repeat: repeat-y;
   background-size: auto;
   position: absolute;
+  z-index: 0;
 }
