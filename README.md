@@ -4,7 +4,8 @@
 
 **Background**
 ------------------
-Beboppin is a vertical 2D scroller, ala the classic arcade game, 1942.
+Beboppin is a vertical 2D scroller, ala the classic arcade game, 1942, and
+using music and ships from the famous anime "Cowboy Bebop".
 
 The player will command a ship (the Swordfish) flying though space,
 with the goal of avoiding obstacles.
@@ -37,10 +38,9 @@ This project will utilize the following:
 - Webpack
 
 We will also need the following scripts:
-- space.js  This displays the board we are on and makes it appear we are moving
 - ship.js Handles the player's ship movement
 - asteroid.js Creates asteroids that move down the screen
-- game.js Defines the basic game rules of winning/losing
+- game.js Defines the basic game rules of winning/losing and updates the board
 
 **Implementation**
 Day 1: Setup webpack and node. Study HTML5 Canvas and get a basic shape on the screen.

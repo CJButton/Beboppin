@@ -7,13 +7,19 @@ html {
 
 .muteButton {
   height: 25px;
-  margin-left: 550px;
+  margin-left: 915px;
+}
+
+.splashScreen {
+  height: 100px;
+  width: 100px;
+  background-color: blue;
 }
 
 #canvas {
   /*background-color: black;*/
   background-image: url(http://res.cloudinary.com/ddbfkqb9m/image/upload/v1480108632/starbg2_i9ud8h.jpg);
-  /*margin-left: 400px;*/
+  margin-left: 400px;
   background-attachment: scroll;
   background-position: center;
   background-repeat: repeat-y;
