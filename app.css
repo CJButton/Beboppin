@@ -2,17 +2,21 @@
 
 
 html {
-  background-color: cadetblue;
+  background-color: purple;
 }
 
+.muteButton {
+  height: 25px;
+  margin-left: 550px;
+}
 
 #canvas {
   /*background-color: black;*/
   background-image: url(http://res.cloudinary.com/ddbfkqb9m/image/upload/v1480108632/starbg2_i9ud8h.jpg);
   /*margin-left: 400px;*/
-  background-attachment: fixed;
+  background-attachment: scroll;
   background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-repeat: repeat-y;
+  background-size: auto;
   position: absolute;
 }
