@@ -2,7 +2,8 @@
 
 
 html {
-  background-color: purple;
+  background-image: url("images/bebopbackground.jpg");
+  background-size: 100%;
   font-family: 'Domine', serif;
 }
 
@@ -26,6 +27,17 @@ html {
   margin-right: 25px;
 }
 
+.pauseMenu {
+  display: none;
+  height: 100px;
+  width: 100px;
+  margin-left: 350px;
+  background-color: black;
+  position: absolute;
+  z-index: 2;
+
+}
+
 .splashScreen {
   margin-top: 25px;
   height: 600px;
@@ -35,10 +47,9 @@ html {
   margin-left: 400px;
   position: absolute;
   z-index: 1;
-
 }
 
-#canvas {
+.canvas {
   margin-top: 25px;
   background-image: url(http://res.cloudinary.com/ddbfkqb9m/image/upload/v1480108632/starbg2_i9ud8h.jpg);
   margin-left: 400px;
