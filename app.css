@@ -32,10 +32,19 @@ html {
   height: 100px;
   width: 100px;
   margin-left: 350px;
-  background-color: black;
+  background-color: purple;
   position: absolute;
   z-index: 2;
+}
 
+.restartMenu {
+  display: none;
+  height: 100px;
+  width: 100px;
+  margin-left: 350px;
+  background-color: blue;
+  position: absolute;
+  z-index: 50;
 }
 
 .splashScreen {
@@ -51,9 +60,9 @@ html {
 
 .canvas {
   margin-top: 25px;
-  background-image: url(http://res.cloudinary.com/ddbfkqb9m/image/upload/v1480108632/starbg2_i9ud8h.jpg);
+  /*background-image: url(http://res.cloudinary.com/ddbfkqb9m/image/upload/v1480108632/starbg2_i9ud8h.jpg);*/
   margin-left: 400px;
-  background-attachment: scroll;
+  /*background-attachment: scroll;*/
   background-position: center;
   background-repeat: repeat-y;
   background-size: auto;

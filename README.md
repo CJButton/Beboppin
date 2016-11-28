@@ -5,9 +5,9 @@
 **Background**
 ------------------
 Beboppin is a vertical 2D scroller, ala the classic arcade game, 1942, and
-using music and ships from the famous anime "Cowboy Bebop".
+using music and ships from "Cowboy Bebop".
 
-The player will command a ship (the Swordfish) flying though space,
+The player will command a ship (Swordfish II) flying though space,
 with the goal of avoiding obstacles.
 
 Functionality and MVP
