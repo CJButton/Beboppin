@@ -29,8 +29,8 @@ html {
 
 .pauseMenu {
   display: none;
-  height: 100px;
-  width: 100px;
+  height: 200px;
+  width: 200px;
   margin-left: 350px;
   background-color: purple;
   position: absolute;
@@ -39,9 +39,9 @@ html {
 
 .restartMenu {
   display: none;
-  height: 100px;
-  width: 100px;
-  margin-left: 350px;
+  height: 200px;
+  width: 200px;
+  margin-left: 100px;
   background-color: blue;
   position: absolute;
   z-index: 50;
