@@ -50,14 +50,31 @@ html {
   width: 90px;
 }
 
+.restartButton {
+  margin-left: 50px;
+  /*padding-left: 50px;*/
+  border-radius: 10px;
+  border: 0;
+  width: 90px;
+}
+
+.restartText {
+  font-size: 14px;
+  padding-left: 9px;
+  color: white;
+  margin: 5px;
+}
+
 .restartMenu {
+  border-radius: 10px;
   display: none;
-  height: 200px;
+  height: 120px;
   width: 200px;
-  margin-left: 100px;
-  background-color: blue;
+  margin-top: 250px;
+  margin-left: 570px;
+  background-color: #87429F;
+  /*display: none;*/
   position: absolute;
-  z-index: 50;
 }
 
 .splashScreen {
