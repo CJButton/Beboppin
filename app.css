@@ -10,31 +10,44 @@ html {
 .muteButton {
   margin-top: 25px;
   height: 25px;
-  margin-left: 360px;
+  margin-left: 330px;
 }
 
 .titleCard {
+  border-radius: 10px;
   width: 600px;
 }
 
 .startButton {
-  margin-left: 250px;
+  height: 30px;
+  width: 130px;
+  margin-left: 230px;
   border: 0;
 }
 
 .introPara {
+  border-radius: 10px;
   margin-left: 60px;
   margin-right: 40px;
 }
 
 .pauseMenu {
+  border-radius: 10px;
   display: none;
-  height: 200px;
-  width: 200px;
-  margin-left: 350px;
-  background-color: purple;
+  height: 25px;
+  width: 100px;
+  margin-top: 250px;
+  margin-left: 622px;
+  /*background-color: purple;*/
   position: absolute;
-  z-index: 2;
+}
+
+.unpauseButton {
+  margin-top: 5px;
+  margin-left: 8px;
+  border-radius: 10px;
+  border: 0;
+  width: 90px;
 }
 
 .restartMenu {
@@ -48,20 +61,22 @@ html {
 }
 
 .splashScreen {
-  margin-top: 25px;
+  border-radius: 10px;
+  margin-top: 15px;
   height: 601px;
   width: 601px;
   background-color: black;
   color: white;
-  margin-left: 400px;
+  margin-left: 375px;
   position: absolute;
   z-index: 1;
 }
 
 .canvas {
-  margin-top: 25px;
+  border-radius: 10px;
+  margin-top: 15px;
   /*background-image: url(http://res.cloudinary.com/ddbfkqb9m/image/upload/v1480108632/starbg2_i9ud8h.jpg);*/
-  margin-left: 400px;
+  margin-left: 375px;
   /*background-attachment: scroll;*/
   background-position: center;
   background-repeat: repeat-y;
