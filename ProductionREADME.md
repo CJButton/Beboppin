@@ -51,3 +51,22 @@ The three elements are created at the same time, and placed on the canvas in the
 location. When the player taps a key, all three pieces move together as one!
 
 ![ship movement](images/production_images/movement.png)
+
+So what happens if the one of these objects collides with an asteroid? Collisions are calculated between circles (the asteroids)
+and rectangles (ship components). Each asteroid is generated randomly and placed in an array. Every interval of the game, the board is refreshed. During this refreshing period, each asteroid object's location, and the ship component's location is compared using this formula.
+
+![collision detection](images/production_images/collision.png)
+
+Essentially, what is being checked for here is if any part of the asteroid object is within a ship component. If it returns true, the game ends, and the player is given an option to restart.
+
+Music
+The soundtrack to Cowboy Bebop was a key component of the show, so I decided to include some of it here for the player to enjoy.
+
+The game's soundtrack will begin playing the moment the game begins. But the player does have an option of muting it using a toggle. Using an event listener (which is waiting for a 'click' or a key press of 'm'), the game music will pause. Canvas does have the ability to play music, which is done by using the 'audio' tag. We can then (using jQuery) easily toggle this when needed.
+
+Pause/UnPause/Restart
+While the canvas appears to be moving smoothly, it is much more similar to film. When I initialized the game, I have a function that sets the 'interval', essentially the refresh rate at 20 milliseconds. This then calls the 'refresh' function every 20ms. It clears the entire canvas, and redraws every object with its now updated position.
+
+To Pause the game, I used a function that acts like a toggle. Upon the player pressing 'p', the canvas gets the signal to 'clearInterval'. The stops the 'setInterval' dead in its tracks but still allows us to resume with another keypress.
+
+To restart the game, I realized that I would need to delete all of the current objects on the canvas, reinitialize them, and have the game start over. 
