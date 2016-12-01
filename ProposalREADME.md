@@ -28,7 +28,7 @@ The player's ship will start at the bottom of the screen. They will be able to m
 Objects/asteroids will move from top to bottom. The player must dodge these objects. If
 one of the objects hits the player's ship, the game is over.
 
-[Image of sample game screen](images/beboppin.png)
+![Image of sample game screen](images/beboppin.png)
 
 **Architecture and Technologies**
 

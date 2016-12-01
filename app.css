@@ -36,7 +36,7 @@ html {
   display: none;
   height: 25px;
   width: 100px;
-  margin-top: 150px;
+  margin-top: 75px;
   margin-left: 622px;
   /*background-color: purple;*/
   position: absolute;
@@ -66,19 +66,31 @@ html {
 }
 
 .controlsMenu {
-  height: 100px;
-  width: 100px;
-  margin-left: 100px;
-  background-color: blue;
-  /*display: true;*/
+  border-radius: 10px;
+  height: 160px;
+  width: 175px;
+  margin-left: 977px;
+  margin-top: 20px;
+  /*padding-right: 275px;*/
+  background-color: #3FA0B7;
+  margin-top: 20px;
+  display: none;
+  z-index: 0;
 }
+
+.controls {
+  margin-left: 15px;
+  margin-top: 20px;
+  padding-top: 15px;
+}
+
 
 .restartMenu {
   border-radius: 10px;
   display: none;
   height: 120px;
   width: 200px;
-  margin-top: 100px;
+  margin-top: 25px;
   margin-left: 570px;
   background-color: #87429F;
   position: absolute;
