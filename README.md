@@ -69,4 +69,24 @@ While the canvas appears to be moving smoothly, it is much more similar to film.
 
 To Pause the game, I used a function that acts like a toggle. Upon the player pressing 'p', the canvas gets the signal to 'clearInterval'. The stops the 'setInterval' dead in its tracks but still allows us to resume with another keypress.
 
-To restart the game, I realized that I would need to delete all of the current objects on the canvas, reinitialize them, and have the game start over. 
+To restart the game, I realized that I would need to delete all of the current objects on the canvas, reinitialize them, and have the game start over.
+
+--------
+the Future
+While the game does function at a basic level, and without any errors, there are many features that I intend to add in the near future.
+- Player's ship will tilt when moving left/right
+  To accomplish this, I will need to practice making sprites/animations as there are none available online for this.
+
+- Player's ship can pick up 'cash' while flying. This will act as a point system.
+
+- Player's ship can shoot at objects, and can destroy them if enough hits are registered.
+  This shouldn't be terribly difficult to do, as it will be quite similar to the current
+  collision system used for ship/asteroid objects.
+
+- Have enemy ships that can shoot at the player.
+
+- Potentially add levels. At the end of a level, the player must defeat a boss character
+  and get a reward.
+
+- If the above are added, it would be fun to have a system of exchanging total cash for ship upgrades.
+  For example, the user could have higher damage resistance, different weapons, etc.
