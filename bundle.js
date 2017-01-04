@@ -46,11 +46,11 @@
 
 	'use strict';
 	
-	var _shipImage = __webpack_require__(4);
+	var _shipImage = __webpack_require__(1);
 	
 	var _shipImage2 = _interopRequireDefault(_shipImage);
 	
-	var _ship = __webpack_require__(1);
+	var _ship = __webpack_require__(2);
 	
 	var _ship2 = _interopRequireDefault(_ship);
 	
@@ -58,7 +58,7 @@
 	
 	var _ship4 = _interopRequireDefault(_ship3);
 	
-	var _junk = __webpack_require__(2);
+	var _junk = __webpack_require__(4);
 	
 	var _junk2 = _interopRequireDefault(_junk);
 	
@@ -240,7 +240,7 @@
 	      // create a random spot for the space junk to originate from
 	      // the second to last element controls the x where it will be
 	      // generated
-	      var RandomX = Math.floor(Math.random() * 450);
+	      var RandomX = Math.floor(Math.random() * 600);
 	
 	      // let's see if we can create two identical objects, one for the hitbox
 	      // and one for the image
@@ -296,6 +296,112 @@
 
 /***/ },
 /* 1 */
+/***/ function(module, exports) {
+
+	"use strict";
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	var ShipImage = function () {
+	  function ShipImage(width, height, color, x, y, type) {
+	    _classCallCheck(this, ShipImage);
+	
+	    this.width = width;
+	    this.height = height;
+	    this.color = color;
+	    this.x = x;
+	    this.y = y;
+	    this.type = type;
+	    if (this.type === "image") {
+	      this.image = new Image();
+	      this.image.src = color;
+	    }
+	    this.speedX = 0;
+	    this.speedY = 0;
+	  }
+	
+	  // will check if an object has collided with the ship
+	
+	
+	  _createClass(ShipImage, [{
+	    key: "pos",
+	    value: function pos() {
+	      // this.x += this.speedX;
+	      // console.log(this.x + this.speedX);
+	
+	
+	      // limiters to movement
+	      if (this.x + this.speedX <= 600 - this.width && this.x + this.speedX > 0) {
+	        this.x += this.speedX;
+	      }
+	
+	      if (this.y + this.speedY < 500 && this.y + this.speedY > 0) {
+	        this.y += this.speedY;
+	      }
+	      // this.x += this.speedX;
+	      // this.y += this.speedY;
+	    }
+	  }, {
+	    key: "stopPos",
+	    value: function stopPos() {
+	      this.speedX = 0;
+	      this.speedY = 0;
+	    }
+	  }, {
+	    key: "moveLeft",
+	    value: function moveLeft() {
+	      if (this.speedX > -8) {
+	        this.speedX -= 1.5;
+	      }
+	    }
+	  }, {
+	    key: "moveRight",
+	    value: function moveRight() {
+	      if (this.speedX < 8) {
+	        this.speedX += 1.5;
+	      }
+	    }
+	  }, {
+	    key: "moveUp",
+	    value: function moveUp() {
+	      if (this.speedY > -8) {
+	        this.speedY -= 1.5;
+	      }
+	    }
+	  }, {
+	    key: "moveDown",
+	    value: function moveDown() {
+	      if (this.speedY < 8) {
+	        this.speedY += 1.5;
+	      }
+	    }
+	  }, {
+	    key: "update",
+	    value: function update(ctx) {
+	      // if an image is provided, then use the drawImage function
+	      if (this.type === "image") {
+	        ctx.drawImage(this.image, this.x, this.y, this.width, this.height);
+	      } else {
+	        // if no image is provided
+	        ctx.fillStyle = this.color;
+	        ctx.fillRect(this.x, this.y, this.width, this.height);
+	      }
+	    }
+	  }]);
+	
+	  return ShipImage;
+	}();
+	
+	exports.default = ShipImage;
+
+/***/ },
+/* 2 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -445,91 +551,6 @@
 	}();
 	
 	exports.default = Ship;
-
-/***/ },
-/* 2 */
-/***/ function(module, exports) {
-
-	"use strict";
-	
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-	
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-	
-	var Junk = function () {
-	  function Junk(width, height, color, x, y, type) {
-	    _classCallCheck(this, Junk);
-	
-	    this.width = width;
-	    this.height = height;
-	    this.color = "blue";
-	    this.x = x;
-	    this.y = y;
-	    this.type = type;
-	    if (this.type === "image") {
-	      this.image = new Image();
-	      this.image.src = color;
-	    }
-	
-	    this.speedX = 0;
-	    this.speedY = 0;
-	  }
-	
-	  _createClass(Junk, [{
-	    key: "pos",
-	    value: function pos() {
-	      this.x += this.speedX;
-	      this.y += this.speedY;
-	    }
-	  }, {
-	    key: "stopPos",
-	    value: function stopPos() {
-	      this.speedX = 0;
-	      this.speedY = 0;
-	    }
-	  }, {
-	    key: "moveDown",
-	    value: function moveDown() {
-	      this.speedY = 1;
-	    }
-	
-	    // on key press, we want to change the x/y of the ship, it's place on the board
-	    // so we should pass this to the game file, and
-	
-	  }, {
-	    key: "update",
-	    value: function update(ctx) {
-	      // if (this.type === "image") {
-	      //   ctx.drawImage(
-	      //     this.image,
-	      //     this.x,
-	      //     this.y,
-	      //     this.width,
-	      //     this.height);
-	      // } else {
-	      //   ctx.beginPath();
-	      //   ctx.arc(this.x,
-	      //           this.y,
-	      //           16,
-	      //           0,
-	      //           2 * Math.PI);
-	      //   ctx.fillStyle = "green",
-	      //   ctx.fill();
-	      //   ctx.stroke();
-	      // ctx.fillStyle = this.color;
-	      // ctx.fillRect(this.x, this.y, this.width, this.height);
-	      // }
-	    }
-	  }]);
-	
-	  return Junk;
-	}();
-	
-	exports.default = Junk;
 
 /***/ },
 /* 3 */
@@ -698,13 +719,13 @@
 	
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 	
-	var ShipImage = function () {
-	  function ShipImage(width, height, color, x, y, type) {
-	    _classCallCheck(this, ShipImage);
+	var Junk = function () {
+	  function Junk(width, height, color, x, y, type) {
+	    _classCallCheck(this, Junk);
 	
 	    this.width = width;
 	    this.height = height;
-	    this.color = color;
+	    this.color = "blue";
 	    this.x = x;
 	    this.y = y;
 	    this.type = type;
@@ -712,30 +733,16 @@
 	      this.image = new Image();
 	      this.image.src = color;
 	    }
+	
 	    this.speedX = 0;
 	    this.speedY = 0;
 	  }
 	
-	  // will check if an object has collided with the ship
-	
-	
-	  _createClass(ShipImage, [{
+	  _createClass(Junk, [{
 	    key: "pos",
 	    value: function pos() {
-	      // this.x += this.speedX;
-	      // console.log(this.x + this.speedX);
-	
-	
-	      // limiters to movement
-	      if (this.x + this.speedX <= 600 - this.width && this.x + this.speedX > 0) {
-	        this.x += this.speedX;
-	      }
-	
-	      if (this.y + this.speedY < 500 && this.y + this.speedY > 0) {
-	        this.y += this.speedY;
-	      }
-	      // this.x += this.speedX;
-	      // this.y += this.speedY;
+	      this.x += this.speedX;
+	      this.y += this.speedY;
 	    }
 	  }, {
 	    key: "stopPos",
@@ -744,51 +751,44 @@
 	      this.speedY = 0;
 	    }
 	  }, {
-	    key: "moveLeft",
-	    value: function moveLeft() {
-	      if (this.speedX > -8) {
-	        this.speedX -= 1.5;
-	      }
-	    }
-	  }, {
-	    key: "moveRight",
-	    value: function moveRight() {
-	      if (this.speedX < 8) {
-	        this.speedX += 1.5;
-	      }
-	    }
-	  }, {
-	    key: "moveUp",
-	    value: function moveUp() {
-	      if (this.speedY > -8) {
-	        this.speedY -= 1.5;
-	      }
-	    }
-	  }, {
 	    key: "moveDown",
 	    value: function moveDown() {
-	      if (this.speedY < 8) {
-	        this.speedY += 1.5;
-	      }
+	      this.speedY = 1;
 	    }
+	
+	    // on key press, we want to change the x/y of the ship, it's place on the board
+	    // so we should pass this to the game file, and
+	
 	  }, {
 	    key: "update",
 	    value: function update(ctx) {
-	      // if an image is provided, then use the drawImage function
-	      if (this.type === "image") {
-	        ctx.drawImage(this.image, this.x, this.y, this.width, this.height);
-	      } else {
-	        // if no image is provided
-	        ctx.fillStyle = this.color;
-	        ctx.fillRect(this.x, this.y, this.width, this.height);
-	      }
+	      // if (this.type === "image") {
+	      //   ctx.drawImage(
+	      //     this.image,
+	      //     this.x,
+	      //     this.y,
+	      //     this.width,
+	      //     this.height);
+	      // } else {
+	      //   ctx.beginPath();
+	      //   ctx.arc(this.x,
+	      //           this.y,
+	      //           16,
+	      //           0,
+	      //           2 * Math.PI);
+	      //   ctx.fillStyle = "green",
+	      //   ctx.fill();
+	      //   ctx.stroke();
+	      // ctx.fillStyle = this.color;
+	      // ctx.fillRect(this.x, this.y, this.width, this.height);
+	      // }
 	    }
 	  }]);
 	
-	  return ShipImage;
+	  return Junk;
 	}();
 	
-	exports.default = ShipImage;
+	exports.default = Junk;
 
 /***/ },
 /* 5 */
