@@ -72,8 +72,6 @@
 	  var canvas = document.getElementById("canvas");
 	  var ctx = canvas.getContext("2d");
 	  var music = document.getElementsByClassName("musicControls");
-	  // what does this do exactly?
-	  document.body.insertBefore(canvas, document.body.childNodes[0]);
 	
 	  // images/swordfish1.png
 	  // we create the ship image object and its two hitboxes (which are invisible)
