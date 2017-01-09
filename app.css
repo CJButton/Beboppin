@@ -39,7 +39,7 @@ html {
 .pauseContainer {
   display: flex;
   justify-content: center;
-  margin-top: 14%;
+  margin-top: 0%;
 
 }
 
@@ -77,17 +77,23 @@ html {
   margin: 5px;
 }
 
+.controlsContainer {
+  display: flex;
+  justify-content: center;
+  margin-left: 65%;
+}
+
 .controlsMenu {
-  /*border-radius: 10px;
+  border-radius: 10px;
   height: 160px;
   width: 175px;
-  margin-left: 977px;
-  margin-top: 20px;
-  /*padding-right: 275px;*/
-  /*background-color: #3FA0B7;
+  /*margin-left: 744px;*/
+  /*margin-top: 20px;*/
+  padding-left: 65px;
+  background-color: #3FA0B7;
   margin-top: 20px;
   display: none;
-  z-index: 0;*/
+  z-index: -1;
 }
 
 .controls {
@@ -100,7 +106,7 @@ html {
 .restartContainer {
   display: flex;
   justify-content: center;
-  margin-top: -1%;
+  margin-top: 0%;
 }
 
 .restartMenu {
