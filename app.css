@@ -7,6 +7,11 @@ html {
   font-family: 'Domine', serif;
 }
 
+.game-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
 .muteButton {
   margin-top: 25px;
   height: 25px;
@@ -31,20 +36,27 @@ html {
   margin-right: 40px;
 }
 
+.pauseContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 14%;
+
+}
+
 .pauseMenu {
   border-radius: 10px;
   display: none;
   height: 25px;
   width: 100px;
   margin-top: 75px;
-  margin-left: 622px;
+  /*margin-left: 622px;*/
   /*background-color: purple;*/
   position: absolute;
 }
 
 .unpauseButton {
   margin-top: 5px;
-  margin-left: 8px;
+  /*margin-left: 8px;*/
   border-radius: 10px;
   border: 0;
   width: 90px;
@@ -66,24 +78,30 @@ html {
 }
 
 .controlsMenu {
-  border-radius: 10px;
+  /*border-radius: 10px;
   height: 160px;
   width: 175px;
   margin-left: 977px;
   margin-top: 20px;
   /*padding-right: 275px;*/
-  background-color: #3FA0B7;
+  /*background-color: #3FA0B7;
   margin-top: 20px;
   display: none;
-  z-index: 0;
+  z-index: 0;*/
 }
 
 .controls {
-  margin-left: 15px;
+  /*margin-left: 15px;
   margin-top: 20px;
-  padding-top: 15px;
+  padding-top: 15px;*/
 }
 
+
+.restartContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: -1%;
+}
 
 .restartMenu {
   border-radius: 10px;
@@ -91,7 +109,7 @@ html {
   height: 120px;
   width: 200px;
   margin-top: 25px;
-  margin-left: 570px;
+  /*margin-left: 570px;*/
   background-color: #87429F;
   position: absolute;
 }
@@ -103,7 +121,7 @@ html {
   width: 601px;
   background-color: black;
   color: white;
-  margin-left: 375px;
+  /*margin-left: 375px;*/
   position: absolute;
   z-index: 1;
 }
@@ -112,7 +130,7 @@ html {
   border-radius: 10px;
   margin-top: 15px;
   /*background-image: url(http://res.cloudinary.com/ddbfkqb9m/image/upload/v1480108632/starbg2_i9ud8h.jpg);*/
-  margin-left: 29px;
+  /*margin-left: 29px;*/
   /*background-attachment: scroll;*/
   background-position: center;
   background-repeat: repeat-y;

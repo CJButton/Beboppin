@@ -10,15 +10,17 @@
     <title>Beboppin'</title>
   </head>
   <body>
-    <div></div>
 
-    <div class="wrapper">
 
 
     <audio class="musicControls">
       <source src="sounds/CB-Rush.mp3" type="audio/mp3">
         Unfortunately, your browser doesn't support the audio element.
     </audio>
+
+
+
+    <div class="game-wrapper">
     <div class="splashScreen" id="splashScreen">
       <img class="titleCard" src="images/cbtitle2.png">
       <p class="introPara">   Beboppin' is a 2D scrolling game based on the hit show
@@ -38,11 +40,12 @@
 
     </div>
 
-    <input class="muteButton" type="image" src="images/volOn.png" ></input>
+      <input class="muteButton" type="image" src="images/volOn.png" ></input>
 
-    <canvas class="canvas" id="canvas" style="border:1px solid #000000;" width="600" height="600">
+      <canvas class="canvas" id="canvas" style="border:1px solid #000000;" width="600" height="600"/>
 
-    </canvas>
+    </div>
+
     <div class="controlsMenu">
       <p class="controls">Controls:
         <br>
@@ -60,18 +63,21 @@
       </p>
     </div>
 
-    <div class="pauseMenu" id="pauseMenu">
-      <input class="unpauseButton" type="button" value="Unpause!"></input>
+    <div class="pauseContainer">
+      <div class="pauseMenu" id="pauseMenu">
+        <input class="unpauseButton" type="button" value="Unpause!"></input>
+      </div>
     </div>
 
 
-    <div class="restartMenu">
-      <div class="restartText">You've crashed, and your bounty is getting away. <br></br>Get back out there or we don't eat!</div>
-      <input class="restartButton" type="button" value="Restart!"></input>
+    <div class="restartContainer">
+      <div class="restartMenu">
+        <div class="restartText">You've crashed, and your bounty is getting away. <br></br>Get back out there or we don't eat!</div>
+        <input class="restartButton" type="button" value="Restart!"></input>
+      </div>
     </div>
 
 
-  </div>
-  <div></div>
+
   </body>
 </html>
