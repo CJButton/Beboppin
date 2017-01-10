@@ -92,14 +92,10 @@
 	  function hideSplash() {
 	    $('.splashScreen').hide();
 	    music[0].autoplay = "true";
-	    $(".controlsMenu").animate({ marginLeft: "59%" });
+	    $(".controlsMenu").animate({ marginLeft: "745px" });
 	    muteSound();
 	    start();
 	  }
-	  // $(".controlsMenu").slideToggle("slow", function() {
-	
-	  // {width: '300px', opacity: '0.8'}, "slow"
-	
 	
 	  window.addEventListener('keypress', function (e) {
 	    if (e.keyCode === 109) {
